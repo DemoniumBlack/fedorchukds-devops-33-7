@@ -44,7 +44,35 @@ Terraform,
 Ansible.
 Приложите вывод команд установленных версий каждой из программ, оформленный в Markdown.
 
-Задача 4
+```
+demonium@Debian:~$ vboxmanage --version
+7.0.10r158379
+```
+```
+demonium@Debian:~$ vagrant -v
+Vagrant 2.3.7
+```
+```
+demonium@Debian:~$ terraform -v
+Terraform v1.5.5
+on linux_amd64
+```
+```
+demonium@Debian:~$ ansible --version
+ansible [core 2.14.3]
+  config file = None
+  configured module search path = ['/home/demonium/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/demonium/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.11.2 (main, Mar 13 2023, 12:18:29) [GCC 12.2.0] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
+```
+![img.png](IMG/img.png)
+
+## Задача 4
+
 Воспроизведите практическую часть лекции самостоятельно.
 
 Создайте виртуальную машину.

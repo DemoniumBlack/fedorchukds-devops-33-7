@@ -69,7 +69,7 @@ ansible [core 2.14.3]
   jinja version = 3.1.2
   libyaml = True
 ```
-![img.png](IMG/img.png)
+![img_1.png](IMG/img_1.png)
 
 ## Задача 4
 
@@ -90,3 +90,20 @@ Error: The requested URL returned error: 404:
 Добавьте его в список образов Vagrant: "vagrant box add bento/ubuntu-20.04 <путь к файлу>".
 Приложите скриншоты в качестве решения на эту задачу.
 
+## Решение 4
+
+Создал виртуальную машину используя файл образа из зеркала https://vagrant.comcloud.xyz/bento/boxes/ubuntu-20.04
+Склонировал предоставленный репозиторий, поправил инвентори файл, дописав в него хост созданной виртуальной машины, в плейбуке поправил имя пользователя, которого нужно добавить в группу docker и в Vagrantfile добавил совместимость Vagrant со второй версией Ansible (setup.compatibility_mode = "2.0").
+
+Docker в виртуальную машину успешно установился:
+
+```
+vagrant@server1:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+```
+vagrant@server1:~$ docker -v
+Docker version 24.0.5, build ced0996
+```
+
+![img_2.png](IMG/img_2.png)
